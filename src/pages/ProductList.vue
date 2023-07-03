@@ -7,14 +7,26 @@
                 <button class="text-xl border-2 py-2 px-5 border-[#e76f51]">Mass Delete</button>
             </div>
         </div>
+        <div class="mx-5 my-5 flex">
+            <div v-for="(product, index) in products" class="w-[20rem]">
+                <Product :product="product" :key="index"/>
+            </div>
+        </div>
     </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import Product from '@/components/Product.vue'
+
+const products = ref([])
 
 // axios doesn't work with 000webhostapp.com
 fetch('https://scandiweb-levan-mikatadze.000webhostapp.com/product')
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => {
+        products.value = data
+    })
+    .catch(err => console.log(err))
 
 </script>
