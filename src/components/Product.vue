@@ -8,27 +8,26 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
 const props = defineProps({
     product: Object,
 })
 
-let productTypeMessage = "";
+let productTypeMessage = ""
 
 const productType = props.product.type.split("\\").pop()
 switch(productType){
     case "DvdDisc":
         productTypeMessage = "Size: " + props.product.size + " MB"
-        break;
+        break
     case "Furniture":
         productTypeMessage = "Dimensions: " + props.product.height + "x" + props.product.width + "x" + props.product.length
-        break;
+        break
     case "Book":
         productTypeMessage = "Weight: " + props.product.weight + "KG"
-        break;
+        break
     default:
         productTypeMessage = "Unknown product type"
-        break;
+        break
 }
 
 </script>
