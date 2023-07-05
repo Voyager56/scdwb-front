@@ -45,23 +45,13 @@ const massDelete = () => {
         console.log("No products selected")
         return
     }
-    fetch('https://scandiweb-levan-mikatadze.000webhostapp.com/product', {
-        method: 'DELETE',
+    fetch('https://scandiweb-levan-mikatadze.000webhostapp.com/product/massDelete', {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(checkedProducts.value)
     })
-    .then(res => res.json())
-    .then(data => {
-        if(data.status === "success"){
-            checkedProducts.value = []
-            location.reload()
-        }else{
-            alert("Something went wrong")
-        }
-    })
-    .catch(err => console.log(err))
 }
 
 
