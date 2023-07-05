@@ -25,6 +25,7 @@ const checkedProducts = ref([])
 fetch('https://scandiweb-levan-mikatadze.000webhostapp.com/product')
     .then(res => res.json())
     .then(data => {
+      console.log(data)
         products.value = data
     })
     .catch(err => console.log(err))
@@ -45,13 +46,18 @@ const massDelete = () => {
         console.log("No products selected")
         return
     }
+    let form = new FormData()
+    checkedProducts.value.forEach(id => {
+        form.append('id[]', id)
+    })
+  console.log(checkedProducts.value)
     fetch('https://scandiweb-levan-mikatadze.000webhostapp.com/product/massDelete', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(checkedProducts.value)
+        body: form
     })
+        .then(res => res.json())
+        .then(location().reload())
+        .catch(err => console.log(err))
 }
 
 
