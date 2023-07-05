@@ -55,7 +55,7 @@ const massDelete = () => {
         body: form
     })
         .then(res => res.json())
-        .then(location().reload())
+        .then(window.location.reload())
         .catch(err => console.log(err))
 }
 
