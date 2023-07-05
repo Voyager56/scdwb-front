@@ -4,11 +4,11 @@
             <h1 class="text-6xl">Product List</h1>
             <div>
                 <a href="/add-product" class="mr-5 text-xl border-2 py-2 px-5 border-[#e76f51] rounded">Add</a>
-                <button class="text-xl border-2 py-2 px-5 border-[#e76f51] delete-checkbox" @click="massDelete">Mass Delete</button>
+                <button class="text-xl border-2 py-2 px-5 border-[#e76f51]" id="delete-product-btn" @click="massDelete">Mass Delete</button>
             </div>
         </div>
         <div class="mx-5 my-5 flex">
-            <div v-for="(product, index) in products" class="w-[20rem]">
+            <div v-for="(product, index) in products" class="w-[20rem] flex flex-wrap">
                 <Product :product="product" :key="index" @checked="checkBoxClickedEvent"/>
             </div>
         </div>
