@@ -3,7 +3,7 @@
         <div class="border-b-2 pb-5 border-[#e76f51] ml-5 mr-5 mt-5 flex justify-between px-5 items-center">    
             <h1 class="text-6xl">Product Add</h1>
             <div>
-                <button class="mr-5 text-xl border-2 py-2 px-5 border-[#e76f51] rounded disabled:opacity-50" type="button" :disabled="!meta.valid"  @click="addProduct(values)">Save</button>
+                <button class="mr-5 text-xl border-2 py-2 px-5 border-[#e76f51] rounded disabled:opacity-50" class="Save" type="button" :disabled="!meta.valid"  @click="addProduct(values)">Save</button>
                 <a href="/" class="text-xl border-2 py-2 px-5 border-[#e76f51]">Cancel</a>
             </div>
         </div>
