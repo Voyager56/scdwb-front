@@ -35,7 +35,6 @@ const checkBoxClickedEvent = (id) => {
     if(checkedProducts.value.includes(id)){
         checkedProducts.value = checkedProducts.value.filter(item => item !== id)
     }else{
-    console.log(id)
     console.log(checkedProducts.value)
         checkedProducts.value.push(id)
     }
@@ -48,7 +47,7 @@ const massDelete = () => {
     }
     let form = new FormData()
     checkedProducts.value.forEach(id => {
-        form.append('id[]', id)
+        form.append('ids[]', id)
     })
   console.log(checkedProducts.value)
     fetch('https://scandiweb-levan-mikatadze.000webhostapp.com/product/massDelete', {
