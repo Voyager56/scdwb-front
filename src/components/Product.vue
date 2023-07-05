@@ -1,5 +1,8 @@
 <template>
-    <div class="border-[#e76f51] py-2 px-3 border mx-5 flex flex-col items-center break-all">
+    <div class="border-[#e76f51] py-2 px-3 border mx-5 flex flex-col items-center break-all relative">
+        <input type="checkbox" class="absolute left-2" 
+            @click="$emit('checked', product.id)"
+        />
         <p>{{ product.sku }}</p>
         <p>{{ product.name }}</p>
         <p>{{ product.price }} $</p>
