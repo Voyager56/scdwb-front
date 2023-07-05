@@ -1,5 +1,5 @@
 <template>
-    <div id="Book">
+    <div id="book">
         <Field 
             id="weight"
             as="input"

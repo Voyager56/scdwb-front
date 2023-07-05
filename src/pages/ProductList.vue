@@ -4,7 +4,7 @@
             <h1 class="text-6xl">Product List</h1>
             <div>
                 <a href="/add-product" class="mr-5 text-xl border-2 py-2 px-5 border-[#e76f51] rounded">Add</a>
-                <button class="text-xl border-2 py-2 px-5 border-[#e76f51]" @click="massDelete">Mass Delete</button>
+                <button class="text-xl border-2 py-2 px-5 border-[#e76f51] delete-checkbox" @click="massDelete">Mass Delete</button>
             </div>
         </div>
         <div class="mx-5 my-5 flex">

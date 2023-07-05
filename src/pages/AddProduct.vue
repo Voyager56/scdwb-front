@@ -37,9 +37,9 @@
             <ErrorMessage name="price" class="text-[#e76f51]"/>
             <Field id="productType" rules="required" name="productType" as="select"  class="bg-[#e9c46a] my-2 text-[#264653]" @change="eventHandler(values)">
                 <option value="" disabled>Select a product type</option>
-                <option value="dvd">DvdDisc</option>
-                <option value="furniture">Furniture</option>
-                <option value="book">Book</option>
+                <option id="DVD" value="dvd">DvdDisc</option>
+                <option id="Furniture" value="furniture">Furniture</option>
+                <option id="Book" value="book">Book</option>
             </Field>
             <ErrorMessage name="productType" class="text-[#e76f51]"/>
             <selectedTypeComponent/>

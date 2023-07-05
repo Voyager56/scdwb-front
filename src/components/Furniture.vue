@@ -1,5 +1,5 @@
 <template>
-    <div id="Furniture" class="flex flex-col">
+    <div id="furniture" class="flex flex-col">
         <Field 
             id="length"
             as="input"

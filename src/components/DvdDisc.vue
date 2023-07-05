@@ -1,5 +1,5 @@
 <template>
-    <div id="DVD" class="flex flex-col">
+    <div id="dvd" class="flex flex-col">
         <Field 
             id="size"
             as="input"
